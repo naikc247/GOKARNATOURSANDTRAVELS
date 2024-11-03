@@ -1,0 +1,725 @@
+/* Responsive adjustments for 1100px and below */
+
+body, html {
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+}
+
+
+@media (max-width: 1100px) {
+  /* Ensure .hero_area background image covers the full width */
+  .hero_area {
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+  }
+
+  /* Remove extra padding/margin to avoid white space */
+  .hero_area, .container-fluid, .slider_section {
+    margin: 0;
+    padding: 0;
+  }
+
+  /* Adjust container padding */
+  .container-fluid {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  /* Make the slider images responsive */
+ @media (max-width: 1100px) {
+  .slider_section .box .img-box img {
+    width: 100%;
+    max-height: 400px; /* Set a max height for consistency */
+    height: auto;
+    object-fit: cover; /* Ensures image fills the box without stretching */
+  }
+
+  /* Additional adjustments to keep heading and form stable */
+  .slider_section .col-md-7,
+  .slider_section .col-lg-4.col-md-5 {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* Prevents shifting due to image sizes */
+  }
+}
+
+  /* Scale down the slider form width */
+  .slider_section .slider_form {
+    width: 90%;
+    max-width: 350px;
+    padding: 20px;
+    margin: auto;
+  }
+
+  /* Reduce heading font sizes for better layout on smaller screens */
+  .slider_section .box .detail-box h1 {
+    font-size: 2rem;
+  }
+
+  .slider_section .box .detail-box h4 {
+    font-size: 1rem;
+  }
+
+  /* Adjust .hero_area background and pseudo-element */
+  .hero_area {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+  }
+
+  .hero_area::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%; /* Ensures the overlay fills the full width */
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  /* Adjust the slider section layout */
+  .slider_section {
+    display: flex;
+    flex-direction: column; /* Stack elements vertically for smaller screens */
+    align-items: center;
+  }
+
+  .slider_section .box {
+    padding: 0 5%; /* Reduce padding for better centering */
+    text-align: center;
+  }
+
+  /* Scale down image box and form */
+  .slider_section .box .img-box img {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+  }
+
+  .slider_section .slider_form {
+    width: 100%;
+    max-width: 350px;
+    padding: 20px;
+    margin: 20px auto;
+  }
+
+  /* Adjust headings for smaller screens */
+  .slider_section .box .detail-box h1 {
+    font-size: 2rem;
+  }
+  
+  .slider_section .box .detail-box h4 {
+    font-size: 1rem;
+  }
+
+  /* Adjust container-fluid padding */
+  .container-fluid {
+    padding-left: 15
+}
+
+
+@media (max-width: 991px) {
+  /* Ensure the header and navbar are contained within the viewport */
+  .header_section .container-fluid,
+  .header_section .navbar {
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+
+  /* Adjust padding/margins to prevent overflow */
+  .header_section .container-fluid {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  /* Hamburger button styling and alignment */
+  .custom_nav-container .navbar-toggler {
+    margin-right: 15px;
+  }
+
+  /* Collapse navbar properly without overflow */
+  .custom_nav-container .navbar-collapse {
+    overflow-x: hidden;
+  }
+
+  /* Remove any extra margin/padding that may cause overflow */
+  .navbar-collapse, .navbar-nav, .nav-item, .nav-link {
+    margin: 0;
+    padding: 0;
+  }
+
+  /* Prevent horizontal scroll due to large fixed width elements */
+  .hero_area,
+  .container-fluid {
+    width: 100vw;
+    overflow-x: hidden;
+  }
+}
+
+/* Media query for small screens (below 768px) */
+@media (max-width: 768px) {
+  /* Stack the form below the carousel and heading */
+  .slider_section .row {
+    flex-direction: column; /* Stack items vertically */
+  }
+
+  /* Adjust the carousel and heading to be full width */
+  .slider_section .col-md-7 {
+    order: 1; /* Keep carousel at the top */
+    width: 100%; /* Full width on small screens */
+    padding: 0 10px; /* Add padding for mobile view */
+  }
+
+  /* Adjust the form to be full width and below the carousel */
+  .slider_section .col-lg-4.col-md-5 {
+    order: 2; /* Place form below the carousel */
+    width: 100%; /* Full width on small screens */
+    margin-top: 20px; /* Add space between carousel and form */
+    padding: 0 10px; /* Add padding for mobile view */
+  }
+
+  /* Adjust form layout for smaller screens */
+  .slider_section .slider_form {
+    width: 100%;
+    padding: 15px; /* Adjust padding to fit mobile screens */
+  }
+
+  .slider_section .carousel-inner {
+    width: 100%; /* Ensure carousel takes full width */
+  }
+}
+
+/* Default setting for larger screens */
+.slider_section .box .img-box img {
+  width: 100%;
+  height: 600px; /* Fixed height for desktop */
+  object-fit: contain;
+}
+
+/* Responsive setting for screens below 1100px */
+@media (max-width: 1100px) {
+  .slider_section .box .img-box img {
+    width: 100%;
+    max-height: 400px; /* Set a max height for consistency */
+    height: auto;
+    object-fit: cover; /* Ensures image fills the box without stretching */
+  }
+
+  /* Ensure consistent layout */
+  .slider_section .form-container {
+    height: 300px; /* Fixed height for the form container */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Center the form vertically */
+  }
+
+  .slider_section .col-md-7,
+  .slider_section .col-lg-4.col-md-5 {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* Keeps heading stable */
+  }
+}
+
+
+@media (max-width: 1100px) {
+  .slider_section .row {
+    flex-direction: column;
+    align-items: center; /* Center the items horizontally */
+  }
+
+  .slider_section .box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Center the content vertically */
+    align-items: center; /* Center the content horizontally */
+    margin-bottom: 30px; /* Add some spacing below */
+  }
+
+  .slider_section .slider_form {
+    width: 100%; /* Make the form take full width */
+    max-width: 400px; /* Keep the max width of the form */
+  }
+
+  .slider_section .box .img-box img {
+    width: 100%;
+    height: 200px; /* Set height to auto */
+    object-fit: contain;
+  }
+}
+
+
+
+/* Center-align paragraph text and add margins */
+.
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+  .about_section .row {
+    flex-direction: column; /* Stack the image and text */
+    padding-top: 50px; /* Reduced padding for mobile */
+  }
+
+  .about_section .detail-box {
+    padding-right: 0; /* Remove right padding for mobile */
+    text-align: center; /* Center align content for mobile */
+  }
+
+  .about_section .detail-box h2 {
+    margin-bottom: 30px; /* Reduce margin for h2 */
+  }
+
+  .about_section .img-box {
+    padding: 30px; /* Reduce padding for the image box */
+  }
+
+  .about_section .img-box img {
+    max-width: 100%; /* Ensure image doesn't exceed container */
+    height: auto; /* Maintain aspect ratio */
+  }
+}
+
+/* Additional media query for medium screens */
+@media (max-width: 991px) {
+  .about_section .detail-box {
+    padding-right: 0; /* Remove padding for medium screens as well */
+  }
+
+  .about_section .detail-box h2 {
+    text-align: left; /* Ensure heading aligns left on medium screens */
+  }
+
+@media (max-width: 768px) {
+    .about_section .detail-box h2 {
+        text-align: left; /* Maintain left alignment on smaller screens */
+    }
+
+    .about_section .detail-box p {
+        max-width: 100%; /* Allow the paragraph to take full width on smaller screens */
+    }
+}
+
+@media (max-width: 800px){
+  .header_section .navbar .navbar-brand a {
+    font-size: 5rem;
+  }
+}
+
+@media (max-width: 767px) {
+  /* Align "About Us" heading to the left */
+  .about_section .detail-box h2 {
+    text-align: left;
+    margin-bottom: 30px;
+  }
+
+  /* Center-align paragraph text and position box in the center */
+  .about_section .detail-box p {
+    text-align: center;
+    margin: 0 auto;
+    max-width: 90%; /* Center within available space */
+  }
+
+  /* Add gap between text and image boxes */
+  .about_section .col-lg-4.col-md-5 {
+    margin-bottom: 20px; /* Space between text and image for mobile */
+  }
+
+  /* Adjust padding inside the detail-box for spacing */
+  .about_section .detail-box {
+    padding-right: 0;
+    padding-left: 10px;
+  }
+  
+  /* Adjust the image box for mobile layout */
+  .about_section .img-box {
+    padding: 20px;
+  }
+}
+@media (max-width: 768px) {
+  /* Stack image box above the detail box */
+  .about_section .row {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  /* Ensure image box comes first */
+  .about_section .img-box {
+    order: 1;
+    padding: 0 20px; /* Add some padding for spacing */
+    margin-bottom: 20px; /* Space below image */
+  }
+
+  /* Position the detail box below the image box */
+  .about_section .detail-box {
+    order: 2;
+    text-align: center; /* Center-align text content */
+    padding: 0 20px; /* Adjust padding for mobile */
+  }
+
+  /* Adjust heading alignment for mobile */
+  .about_section .detail-box h2 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  /* Stack image box above the detail box */
+  .about_section .row {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 20px; /* Reduced padding at the top */
+  }
+
+  /* Ensure image box comes first */
+  .about_section .img-box {
+    order: 1;
+    padding: 0 20px; /* Add side padding for spacing */
+    margin-bottom: 20px; /* Space below image */
+  }
+
+  /* Position the detail box below the image box */
+  .about_section .detail-box {
+    order: 2;
+    text-align: center; /* Center-align text content */
+    padding: 0 20px; /* Adjust padding for mobile */
+  }
+
+  /* Adjust heading alignment and margin */
+  .about_section .detail-box h2 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+}
+
+
+
+
+@media (max-width: 768px) {
+  /* Service Section Styling for Mobile */
+  
+  .service_section {
+    padding-top: 40px; /* Reduced padding between sections */
+  }
+
+  .service_section .heading_container h2 {
+    text-align: left; /* Left-align heading */
+    margin-bottom: 20px; /* Space below heading */
+  }
+
+  .service_section .service_container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center; /* Center-align text for readability */
+  }
+
+  /* Stack each service box in a single column */
+  .service_section .service_container .box {
+    width: 90%; /* Full width with side padding */
+    margin-bottom: 30px; /* Reduced margin for compact spacing */
+    margin-right: 0; /* Remove right margin */
+  }
+
+  /* Center the image and text content in each box */
+  .service_section .service_container .box .img-box,
+  .service_section .service_container .box .detail-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  /* Adjust image size and alignment */
+  .service_section .service_container .box .img-box {
+    height: auto;
+    margin-bottom: 10px;
+  }
+
+  .service_section .service_container .box .img-box img {
+    width: 60px; /* Smaller image size for mobile */
+    height: auto;
+  }
+}
+
+
+
+/* Mobile-first responsive adjustments for Packages section */
+@media (max-width: 480px) {
+
+  /* Align headings to the left */
+  .news_section .heading_container h2,
+  .news_section .row_heading h3 {
+    text-align: left;
+    padding-left: 15px;
+  }
+
+  /* Stack each box in a single column */
+  .news_section .news_container {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px; /* Adjust gap as needed between boxes */
+  }
+
+  .news_section .news_container .box {
+    width: 90%; /* Make each box take up most of the screen width */
+    max-width: 400px; /* Optional maximum width for a clean look */
+    margin: 0 auto; /* Center each box */
+  }
+
+  /* Reduce the space between sections for consistency with previous sections */
+  .news_section {
+    padding-top: 40px; /* Adjusted for less top padding */
+    padding-bottom: 40px;
+  }
+
+  /* Adjust heading gaps between rows */
+  .news_section .row_heading {
+    margin-top: 20px;
+    margin-bottom: 10px;
+  }
+}
+
+
+
+/* Mobile-first adjustments for gallery section */
+@media (max-width: 767px) {
+  .gallery_section .img-box {
+    width: 90%; /* Set a responsive width */
+    height: auto; /* Maintain aspect ratio */
+  }
+
+  .gallery_section .gallery-nav {
+    justify-content: center; /* Center the navigation buttons */
+    margin-top: 20px;
+  }
+
+  .gallery_section .gallery-prev,
+  .gallery_section .gallery-next {
+    width: 40px; /* Smaller button size for mobile */
+    height: 40px;
+    background-size: 12px; /* Adjust icon size */
+  }
+}
+/* Mobile-first adjustments for gallery section */
+@media (max-width: 767px) {
+  .gallery_section .img-box {
+    width: 90%; /* Responsive width */
+    height: 400px; /* Increased height for better view on mobile */
+  }
+
+  .gallery_section .gallery-nav {
+    justify-content: center;
+    margin-top: 20px;
+  }
+
+  .gallery_section .gallery-prev,
+  .gallery_section .gallery-next {
+    width: 40px;
+    height: 40px;
+    background-size: 12px;
+  }
+}
+
+@media (max-width: 768px) {
+  .gallery_section .img-box {
+    height: 400px; /* Increase height for mobile */
+  }
+
+  .gallery_section {
+    padding-top: 50px; /* Reduce padding for mobile */
+  }
+}
+@media (max-width: 768px) {
+  .gallery_section .img-box {
+    height: 400px; /* Increase height for mobile */
+  }
+
+  .gallery_section {
+    padding-top: 30px; /* Adjust top padding for mobile */
+    padding-bottom: 30px; /* Adjust bottom padding for mobile */
+  }
+}
+
+
+
+@media (max-width: 768px) {
+  .client_section {
+    padding-top: 30px; /* Adjust top padding for mobile */
+    padding-bottom: 30px; /* Adjust bottom padding for mobile */
+  }
+}
+
+
+@media (max-width: 768px) {
+  .contact_section {
+    padding-top: 30px; /* Adjust top padding for mobile */
+    padding-bottom: 30px; /* Adjust bottom padding for mobile */
+  }
+
+  .contact_section .row {
+    flex-direction: column; /* Align columns one below the other */
+    gap: 30px; /* Add some space between the stacked elements */
+  }
+
+  .contact_section .detail-box {
+    padding-left: 20px; /* Adjust padding for mobile */
+  }
+
+  .contact_section .map-box {
+    width: 100%; /* Make the map box full width on mobile */
+    padding: 0 20px; /* Add some padding for mobile */
+  }
+
+  .contact_section .map-box iframe {
+    height: 200px; /* Adjust iframe height for mobile */
+  }
+
+  .contact_section .map-box .rate-us-button {
+    width: 100%; /* Make button full width on mobile */
+  }
+}
+@media (max-width: 768px) {
+  .contact_section {
+    padding-top: 30px; /* Adjust top padding for mobile */
+    padding-bottom: 30px; /* Adjust bottom padding for mobile */
+  }
+
+  .contact_section .row {
+    flex-direction: column; /* Align columns one below the other */
+    gap: 30px; /* Add some space between the stacked elements */
+  }
+
+  .contact_section .detail-box {
+    padding-left: 20px; /* Adjust padding for mobile */
+  }
+
+  .contact_section .map-box {
+    width: 100%; /* Make the map box full width on mobile */
+    padding: 0; /* Remove additional padding to avoid overflow */
+  }
+
+  .contact_section .map-box iframe {
+    height: 200px; /* Adjust iframe height for mobile */
+    width: 100%; /* Set iframe width to 100% to fit within the container */
+    border-radius: 8px; /* Maintain rounded corners */
+  }
+
+  .contact_section .map-box .rate-us-button {
+    width: 100%; /* Make button full width on mobile */
+  }
+}
+
+.footer_section p {
+  font-size: 0.9rem; /* Smaller font size for a subtle footer appearance */
+  color: #000000;
+  margin: 0 auto;
+  text-align: center;
+  padding: 10px 0; /* Reduce padding to make it more compact */
+  width: 80%;
+}
+
+.footer_section a {
+  color: #000000;
+  font-size: 0.5rem; /* Match the link font size with the paragraph */
+}
+
+
+@media (max-width: 767px) { /* Mobile devices */
+  .about_section .detail-box h2 {
+    text-align: left; /* Align heading to the left */
+    margin-bottom: 20px; /* Adjust margin for spacing */
+  }
+
+  .about_section .row {
+    flex-direction: column; /* Stack columns vertically */
+    padding-top: 50px; /* Adjust top padding */
+  }
+
+  .about_section .detail-box {
+    padding-right: 0; /* Remove right padding */
+    text-align: left; /* Ensure text is aligned left */
+  }
+
+  .about_section .img-box {
+    padding: 0; /* Remove padding for the image box */
+  }
+}
+
+@media (max-width: 768px) {
+  /* Align .navbar-brand to the far left */
+  .header_section .navbar-brand {
+    margin-right: auto;
+  }
+
+  /* Align .navbar-toggler to the far right */
+  .header_section .navbar-toggler {
+    margin-left: auto;
+    padding: 5px;
+  }
+
+  /* Adjust the navbar-toggler icon size for better visibility */
+  .navbar-toggler .navbar-toggler-icon {
+    background-size: 35px;
+  }
+
+  /* Remove gap between navbar-brand and navbar-toggler on small screens */
+  .header_section .navbar {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+@media (max-width: 768px) {
+  /* Adjust form box size */
+  .form-box {
+    width: 90%; /* Reduce width to make it smaller */
+    max-width: 400px; /* Set a max width to avoid being too wide */
+    margin: 0 auto; /* Center the form box */
+  }
+
+  /* Center the slider image box */
+  .slider-image {
+    margin: 0 auto; /* Center the slider image */
+    display: block; /* Ensure it behaves like a block element */
+  }
+  /* Center the slider image box */
+.slider_section .box {
+  margin-bottom: 100px;
+  display: flex;
+  justify-content: center; /* Center content horizontally */
+}
+
+/* Adjust the size of the form box */
+.slider_section .slider_form {
+  width: 300px; /* Set a specific width */
+  margin: auto; /* Center form box */
+  padding: 15px; /* Add padding */
+}
+
+/* Ensure navigation buttons align to the right */
+.custom_nav-container .navbar-nav {
+  margin-left: auto; /* Push navigation items to the right */
+}
+
+/* Adjust the navbar brand styles */
+.navbar-brand {
+  font-size: 20px; /* Make the text smaller */
+}
+
+/* Adjust the span in navbar brand */
+.navbar-brand span {
+  font-size: 20px; /* Smaller font size */
+  display: block; /* Move name to next line */
+}
+
+
+
+}
+
